@@ -1,4 +1,4 @@
-# :rocket: AnaliseAlgoritmos
+# :rocket: Analise de Algoritmos
 
 **Grupo:** Gabriel de Jesus, Rafhael Martins, Victor Resende, Nathãn Ferreira.
 
