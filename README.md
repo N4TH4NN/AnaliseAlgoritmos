@@ -1,8 +1,9 @@
-# AnaliseAlgoritmos
+# :rocket: AnaliseAlgoritmos
 
 **Grupo:** Gabriel de Jesus, Rafhael Martins, Victor Resende, Nathãn Ferreira.
 
-## :rocket: Repositório criado com a finalidade de versionamento de códigos para o trabalho do professor Rodrigo da matéria de Análise de Algoritmos.
+## :dart: Objetivo
+Repositório criado com a finalidade de realizar o versionamento de códigos para o trabalho do professor [Rodrigo Hagstrom](https://github.com/RodrigoHagstrom) da matéria de Análise de Algoritmos.
 
 ### :memo: Aula 03 - Versionamento de códigos com Git e GitHub
 O Grupo ou aluno deve desenvolver código em C, Java, Python, Ruby ou qualquer outra linguagem de sua preferência para três versões da busca linear, conforme slides apresentados nas duas primeiras aulas, ou seja, busca linear, busca linear melhorada, e busca linear melhorada com sentinela. 
