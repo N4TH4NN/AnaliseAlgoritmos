@@ -1,6 +1,6 @@
 # :rocket: Analise de Algoritmos
 
-**Grupo:** Gabriel de Jesus, Rafhael Martins, Victor Resende, Nathãn Ferreira.
+**Grupo:** Gabriel de Jesus, Rafhael Martins, Victor Resende, Natã Ferreira.
 
 ## :dart: Objetivo
 Repositório criado com a finalidade de realizar o versionamento de códigos para o trabalho do professor [Rodrigo Hagstrom](https://github.com/RodrigoHagstrom) da matéria de Análise de Algoritmos.
