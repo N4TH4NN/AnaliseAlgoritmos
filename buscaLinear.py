@@ -16,8 +16,9 @@ def criarVetor():
 	return vetor
 
 
-print('\n\n\n######################################################\n\n\n')
-print('BUSCA LINEAR SEQUENCIAL')
+print('\n\n\n######################################################')
+print('\t\tBUSCA LINEAR SEQUENCIAL')
+print('######################################################')
 	
 def buscaLinear():
 	vetor = criarVetor()
@@ -40,8 +41,9 @@ buscaLinear()
 fim_buscaLinear = time.time()
 print('Tempo execucao:', (fim_buscaLinear - inicio_buscaLinear)/60)
 
-print('\n\n\n######################################################\n\n\n')
-print('BUSCA LINEAR MELHORADA')
+print('\n\n\n######################################################')
+print('\t\tBUSCA LINEAR MELHORADA')
+print('######################################################')
 	
 def buscaLinearMelhorada():
 	vetor = criarVetor()
@@ -69,4 +71,42 @@ buscaLinearMelhorada()
 fim_buscaLinearMelhorada = time.time()
 print('Tempo execucao:', (fim_buscaLinearMelhorada - inicio_buscaLinearMelhorada)/60)
 
-print('\n\n\n######################################################\n\n\n')
+print('\n\n\n######################################################')
+print('\t\tBUSCA LINEAR COM SENTINELA')
+print('######################################################')
+
+
+def buscaLinearSentinela():
+	vetor = criarVetor()
+	#print("Vetor gerado: ", vetor)
+	print('\n')
+
+
+	sentinela = int(input('Digite um número para procurar na lista: '))
+	print('\n')
+	resultado = -1
+	num = len(vetor)
+	ultimo = vetor[num - 1]
+	vetor[num - 1] = sentinela
+	i = 0
+
+	while vetor[i] != sentinela:
+		i += 1
+		#print(f'Verificando se o número {sentinela} está no índice {i} da lista.')
+
+	vetor[num - 1] = ultimo
+
+	if i == len(vetor) - 1:
+		print('Número não encontrado.\n')
+
+
+	print(f'O número {sentinela} foi encontrado no índice {i} da lista.\n\n')
+
+	print('Fim da Busca Linear com Sentinela.\nObrigado por usar!')
+
+painel()
+
+inicio_buscaLinearSentinela = time.time()
+buscaLinearSentinela()
+fim_buscaLinearSentinela = time.time()
+print('Tempo execucao:', (fim_buscaLinearSentinela - inicio_buscaLinearSentinela)/60)
