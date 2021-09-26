@@ -4,7 +4,7 @@ DISCIPLINA: ANÁLISE DE ALGORITMOS.
 GRUPO: Gabriel de Jesus, Nathan Santana, Rafhael Martins e Victor Resende.
 PROFESSOR: Rodrigo Hagstrom.*/
 
-// C program for implementation of Bubble sort
+#include <math.h>
 #include <stdio.h>
 #include<time.h>
 
@@ -15,6 +15,7 @@ void swap(int *xp, int *yp)
 	*yp = temp;
 }
 
+// C program for implementation of Bubble sort
 // A function to implement bubble sort
 void bubbleSort(int arr[], int n)
 {
@@ -55,13 +56,33 @@ void insertionSort(int arr[], int n)
     }
 }
 
+
+// C program for implementation of selection sort
+void selectionSort(int arr[], int n)
+{
+    int i, j, min_idx;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++)
+    {
+        // Find the minimum element in unsorted array
+        min_idx = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] < arr[min_idx])
+            min_idx = j;
+ 
+        // Swap the found minimum element with the first element
+        swap(&arr[min_idx], &arr[i]);
+    }
+}
+
 // Driver program to test above functions
 int main()
 {
 	int arr[] = {64, 34, 25, 12, 22, 11, 90};
 	int n = sizeof(arr)/sizeof(arr[0]);
 
-    clock_t t_bs, t_is; //variável para armazenar tempo
+    clock_t t_bs, t_is, t_ss; //variável para armazenar tempo
 
     printf("\n####################");
     printf("\nORDENAÇÃO BUBBLE SORT");
@@ -87,6 +108,19 @@ int main()
     printf("Tempo de execucao: %lf\n", ((double)t_is)/((CLOCKS_PER_SEC))); //conversão para double
 
     printf("Ordenação Insertion Sort: \n");
+    printArray(arr, n);
+
+    printf("\n####################");
+    printf("\nORDENAÇÃO SELECTION SORT");
+    printf("\n####################\n\n");
+
+    t_ss = clock(); //armazena tempo
+    selectionSort(arr, n);
+    t_ss = clock() - t_ss; //tempo final - tempo inicial
+    //imprime o tempo na tela
+    printf("Tempo de execucao: %lf\n", ((double)t_ss)/((CLOCKS_PER_SEC))); //conversão para double
+
+    printf("Ordenação Selection Sort: \n");
     printArray(arr, n);
 	return 0;
 }
