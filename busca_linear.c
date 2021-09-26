@@ -13,7 +13,7 @@ o tempo de execução do código.*/
 #include<time.h>
 #include <unistd.h> //para linux
 
-#define MAX 100
+#define MAX 35000
 #define LEN 20
 
 // Função de contador de tempo em ms para a iteracao no terminal ficar mais interessante.
