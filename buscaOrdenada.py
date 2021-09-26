@@ -78,3 +78,34 @@ insertionSort()
 fim_insertionSort = time.time()
 print('Tempo execucao:', (fim_insertionSort - inicio_insertionSort)/60)
 print('Obrigado por usar a busca ordenada: Insert Sort!')
+
+print('\n\n\n######################################################')
+print('\t\tSELECT SORT')
+print('######################################################')
+ 
+def selectSort():
+    for i in range(len(vetor)):
+        
+        # Find the minimum element in remaining
+        # unsorted array
+        min_idx = i
+        for j in range(i+1, len(vetor)):
+            if vetor[min_idx] > vetor[j]:
+                min_idx = j
+                
+        # Swap the found minimum element with
+        # the first element       
+        vetor[i], vetor[min_idx] = vetor[min_idx], vetor[i]
+
+    print ("\n\nO vetor ordenado eh:")
+    for i in range(len(vetor)):
+        print("%d" %vetor[i])
+ 
+# Driver code to test above
+painel()
+
+inicio_selectSort = time.time()
+selectSort()
+fim_selectSort = time.time()
+print('Tempo execucao:', (fim_selectSort - inicio_selectSort)/60)
+print('Obrigado por usar a busca ordenada: Select Sort!')
