@@ -56,10 +56,10 @@ int main()
     n = procurar();
 
     // Chama a função busca_linear.
-    //busca_linear(vet, n);
+    busca_linear(vet, n);
 
     // Chama a função busca_linear_melhorada.
-    //busca_linear_melhorada(vet, n);
+    busca_linear_melhorada(vet, n);
 
     int array[LEN] = {3, 1, 4, 7, 10,
               20, 17, 19, 15, 16,
