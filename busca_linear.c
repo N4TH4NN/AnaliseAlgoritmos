@@ -26,9 +26,6 @@ int procurar(void);
 // Inicializa a função de busca_linear.
 int busca_linear(int v[], int num);
 
-// Inicializa a função de busca_linear_melhorada.
-int busca_linear_melhorada(int v[], int num);
-
 int main()
 {
     //Defini do vetor e variáveis.
@@ -53,14 +50,6 @@ int main()
     // Chama a função busca_linear.
     t_bl = clock(); //armazena tempo
     busca_linear(vet, n);
-    t_bl = clock() - t_bl; //tempo final - tempo inicial
-    //imprime o tempo na tela
-    printf("Tempo de execucao: %lf\n", ((double)t_bl)/((CLOCKS_PER_SEC))); //conversão para double
-
-
-    // Chama a função busca_linear_melhorada.
-    t_bl = clock(); //armazena tempo
-    busca_linear_melhorada(vet, n);
     t_bl = clock() - t_bl; //tempo final - tempo inicial
     //imprime o tempo na tela
     printf("Tempo de execucao: %lf\n", ((double)t_bl)/((CLOCKS_PER_SEC))); //conversão para double
@@ -102,34 +91,4 @@ int busca_linear(int v[], int num)
     }
     printf("\n\nTodos os índices percorridos!\n");
 
-}
-
-// Função para buscar linear melhorada.
-int busca_linear_melhorada(int v[], int num)
-{
-    //Defini variáveis.
-    int i;
-
-    printf("\n####################");
-    printf("\nBUSCA LINEAR MELHORADA");
-    printf("\n####################\n\n");
-
-    // Busca o elemento no vetor.
-    for (i = 0; i < MAX; i++){
-        //printf("\nProcurando elemento %d no índice [%d]", num, i);
-        if(v[i] == num){
-            //printf("\n\nElemento encontrado!!!");
-            break;
-        }
-        msleep(200);
-    }
-
-    // Verifica se encontrou o elemento e qual o índice.
-    if(i < MAX){
-        printf("\n\nElemento %d encontrado no índice [%d]\n", num, i);
-    }
-    else{
-        printf("\n\nTodos os índices percorridos!");
-        printf("\nElemento não foi encontrado!!!\n");
-    }
 }
