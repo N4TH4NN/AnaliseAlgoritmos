@@ -47,3 +47,34 @@ bubbleSort()
 fim_bubbleSort = time.time()
 print('Tempo execucao:', (fim_bubbleSort - inicio_bubbleSort)/60)
 print('Obrigado por usar a busca ordenada: Bubble Sort!')
+
+print('\n\n\n######################################################')
+print('\t\tINSERTION SORT')
+print('######################################################')
+def insertionSort():
+ 
+    # Traverse through 1 to len(arr)
+    for i in range(1, len(vetor)):
+ 
+        key = vetor[i]
+ 
+        # Move elements of arr[0..i-1], that are
+        # greater than key, to one position ahead
+        # of their current position
+        j = i-1
+        while j >= 0 and key < vetor[j] :
+                vetor[j + 1] = vetor[j]
+                j -= 1
+        vetor[j + 1] = key
+
+    print ("\n\nO vetor ordenado eh:")
+    for i in range(len(vetor)):
+        print("% d" % vetor[i])
+
+painel()
+
+inicio_insertionSort = time.time()
+insertionSort()
+fim_insertionSort = time.time()
+print('Tempo execucao:', (fim_insertionSort - inicio_insertionSort)/60)
+print('Obrigado por usar a busca ordenada: Insert Sort!')
