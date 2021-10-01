@@ -1,4 +1,4 @@
-/* BUBBLE SORT.
+/* BUSCA ORDENADA.
 
 DISCIPLINA: ANÁLISE DE ALGORITMOS.
 GRUPO: Gabriel de Jesus, Nathan Santana, Rafhael Martins e Victor Resende.
